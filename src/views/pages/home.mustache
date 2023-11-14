@@ -1,0 +1,24 @@
+{{>partials/header}}
+
+{{>partials/form}}
+<hr>
+
+<form method="GET" action="/search">
+ <input type="text" name="search" value="{{search}}" placeholder="Search..." autocomplete="off"/> 
+</form>
+
+<ul class="user-list">
+  {{#users}}
+    {{>partials/user}}  
+  {{/users}}
+</ul>
+{{#pagination}}
+  <a href="/page/{{.}}">{{.}}</a>
+{{/pagination}}
+
+{{#editing}}
+  {{>partials/formEdit}}
+{{/editing}}
+
+
+{{>partials/footer}}

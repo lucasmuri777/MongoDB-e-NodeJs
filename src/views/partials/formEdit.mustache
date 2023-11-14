@@ -1,0 +1,14 @@
+{{#user}}
+<fieldset>
+    <legend>Editando a/o {{name.firstName}} {{name.lastName}}</legend>
+    <form method="POST" action="/updateUser">
+        <input required type="text" name="firstName" placeholder="Digite o primeiro nome" value="{{name.firstName}}"/><br/><br/>
+        <input type="text" name="lastName" placeholder="Digite o segundo nome" value="{{name.lastName}}"/><br/><br/>
+        <input required type="number" name="age" placeholder="Digite uma idade" value="{{age}}"/><br/><br/>
+        <input required type="email" name="email" placeholder="Digite um email" value="{{email}}"/><br/><br/>
+        <input type="text" name="interests" placeholder="Digite seus interesses (Separe por ,)" value="{{interests}}"/><br/><br/>
+        <input type="submit" value="Atualizar Usuário"/><br/><br/>
+        <input type="hidden" name="id" value="{{_id}}"/>
+    </form>
+</fieldset>
+{{/user}}

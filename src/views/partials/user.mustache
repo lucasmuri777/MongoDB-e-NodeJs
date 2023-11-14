@@ -1,0 +1,8 @@
+<li style="margin: 10px 0;">
+    <a class="edit" href="/edit/{{_id}}">EDIT</a>
+    <a class="delete" href="/delete/{{_id}}">DEL</a>
+    <p><strong>Name:</strong> {{name.firstName}} {{name.lastName}}</p>
+    <p><strong>Age:</strong> {{age}}</p>
+    <p><strong>Email:</strong> {{email}}</p>
+    <p><strong>Interesses:</strong>{{#interests}} {{.}}, {{/interests}}</p>
+</li>
